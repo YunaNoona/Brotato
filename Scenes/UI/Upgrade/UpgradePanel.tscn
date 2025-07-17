@@ -1,0 +1,76 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgugckvx4ls3s"]
+
+[ext_resource type="PackedScene" uid="uid://uwf2w238evcp" path="res://Scenes/UI/Stats/StatsContainer.tscn" id="1_2xpnu"]
+[ext_resource type="Script" uid="uid://brgu6cd1fnjaf" path="res://Scripts/UI/UpgradePanel.gd" id="1_7jqw0"]
+[ext_resource type="PackedScene" uid="uid://coweutu65b0dk" path="res://Scenes/UI/Upgrade/UpgradeCard.tscn" id="1_d8ggc"]
+[ext_resource type="Script" uid="uid://fhannu8q7i6y" path="res://Scripts/Upgrades/ItemUpgrade.gd" id="2_qe1su"]
+[ext_resource type="Resource" uid="uid://begf2rhelexxv" path="res://Data/Upgrade/Upgrade_Block_I.tres" id="3_e82ix"]
+[ext_resource type="Resource" uid="uid://kgtobul1a1hx" path="res://Data/Upgrade/Upgrade_Damage_I.tres" id="4_jspod"]
+[ext_resource type="Resource" uid="uid://dyhgrp83nnl74" path="res://Data/Upgrade/Upgrade_Harvesting_I.tres" id="5_i5lwx"]
+[ext_resource type="Resource" uid="uid://b8cpq7w1d403w" path="res://Data/Upgrade/Upgrade_Health_I.tres" id="6_hieme"]
+[ext_resource type="Resource" uid="uid://4dbp4kbew3ex" path="res://Data/Upgrade/Upgrade_HealthRegenration_I.tres" id="7_ifjw0"]
+[ext_resource type="Resource" uid="uid://c112ivrq8cbi1" path="res://Data/Upgrade/Upgrade_LifeSteal_I.tres" id="8_i2qap"]
+[ext_resource type="Resource" uid="uid://cy8d73g8a5nts" path="res://Data/Upgrade/Upgrade_Luck_III.tres" id="9_ctrrr"]
+[ext_resource type="Resource" uid="uid://cy3p6t43dj2ny" path="res://Data/Upgrade/Upgrade_Speed_V.tres" id="10_qu632"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u56rl"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2xpnu"]
+font_size = 120
+
+[node name="UpgradePanel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u56rl")
+script = ExtResource("1_7jqw0")
+upgrade_list = Array[ExtResource("2_qe1su")]([ExtResource("3_e82ix"), ExtResource("4_jspod"), ExtResource("5_i5lwx"), ExtResource("6_hieme"), ExtResource("7_ifjw0"), ExtResource("8_i2qap"), ExtResource("9_ctrrr"), ExtResource("10_qu632")])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wave Completed"
+label_settings = SubResource("LabelSettings_2xpnu")
+horizontal_alignment = 1
+
+[node name="ItemsContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="UpgradeCard" parent="MarginContainer/HBoxContainer/VBoxContainer/ItemsContainer" instance=ExtResource("1_d8ggc")]
+layout_mode = 2
+
+[node name="UpgradeCard2" parent="MarginContainer/HBoxContainer/VBoxContainer/ItemsContainer" instance=ExtResource("1_d8ggc")]
+layout_mode = 2
+
+[node name="UpgradeCard3" parent="MarginContainer/HBoxContainer/VBoxContainer/ItemsContainer" instance=ExtResource("1_d8ggc")]
+layout_mode = 2
+
+[node name="UpgradeCard4" parent="MarginContainer/HBoxContainer/VBoxContainer/ItemsContainer" instance=ExtResource("1_d8ggc")]
+layout_mode = 2
+
+[node name="StatsContainer" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_2xpnu")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

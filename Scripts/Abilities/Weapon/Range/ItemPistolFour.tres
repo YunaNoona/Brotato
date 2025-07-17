@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemWeapon" load_steps=5 format=3 uid="uid://dwnn8ch0mmmot"]
+
+[ext_resource type="Texture2D" uid="uid://bvrve6ucp4svv" path="res://Assets/Sprites/Weapons/Icons/Weapon_wand_icon.png" id="1_3nswu"]
+[ext_resource type="PackedScene" uid="uid://dkvpb52a5j7dh" path="res://Scenes/Weapons/Melle/WeaponWand.tscn" id="2_372a4"]
+[ext_resource type="Script" uid="uid://d2v2mo7j3nvfy" path="res://Scripts/Abilities/Weapon/ItemWeapon.gd" id="3_t4hd8"]
+[ext_resource type="Resource" uid="uid://cja7fn2csb7v6" path="res://Scripts/Stats/Weapons/Melle/Wand/StatsWandFour.tres" id="4_rq8md"]
+
+[resource]
+script = ExtResource("3_t4hd8")
+type = 0
+scene = ExtResource("2_372a4")
+stats = ExtResource("4_rq8md")
+item_name = "Wand IV"
+item_icon = ExtResource("1_3nswu")
+item_tier = 3
+item_type = 0
+item_cost = 300
+metadata/_custom_type_script = "uid://d2v2mo7j3nvfy"

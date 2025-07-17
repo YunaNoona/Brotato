@@ -1,0 +1,121 @@
+[gd_scene load_steps=39 format=3 uid="uid://bk381kdecixgc"]
+
+[ext_resource type="Texture2D" uid="uid://cy4xfx762bxgb" path="res://Assets/Sprites/BG.png" id="1_0g2wx"]
+[ext_resource type="Script" uid="uid://b6b7nvocyq31f" path="res://Scripts/Core/Arena.gd" id="1_4f205"]
+[ext_resource type="Texture2D" uid="uid://ov4fmsbglo55" path="res://Assets/Sprites/Map.png" id="2_pyk7t"]
+[ext_resource type="PackedScene" uid="uid://cep5gpcms5fqg" path="res://Scenes/Player/PlayerWellRounded.tscn" id="3_pyk7t"]
+[ext_resource type="Script" uid="uid://b5e0rldhvjdr3" path="res://Scripts/Core/Camera.gd" id="4_x00a1"]
+[ext_resource type="Script" uid="uid://bougit5dqlg2t" path="res://Scripts/Waves/Spawner.gd" id="7_jhdhk"]
+[ext_resource type="Script" uid="uid://dq7rnby5u5823" path="res://Scripts/Waves/WaveData.gd" id="8_0ds76"]
+[ext_resource type="FontFile" uid="uid://c4t5k5hnacwr1" path="res://Assets/Font/Michroma-Regular.ttf" id="8_bugre"]
+[ext_resource type="Resource" uid="uid://b4rh1clk16if4" path="res://Scripts/Waves/Wave1-5.tres" id="9_7dk6h"]
+[ext_resource type="PackedScene" uid="uid://dgugckvx4ls3s" path="res://Scenes/UI/Upgrade/UpgradePanel.tscn" id="10_0ds76"]
+[ext_resource type="PackedScene" uid="uid://rpbk8vix4rfl" path="res://Scenes/UI/ShopPanel.tscn" id="11_7dk6h"]
+[ext_resource type="Script" uid="uid://coifcearf14vr" path="res://Scripts/Abilities/ItemsBase.gd" id="12_x66n5"]
+[ext_resource type="Resource" uid="uid://dod3vhu0qbet7" path="res://Scripts/Abilities/Weapon/Melee/Axe/ItemAxeOne.tres" id="13_lr7mh"]
+[ext_resource type="Resource" uid="uid://cocf47fae8ceh" path="res://Scripts/Abilities/Weapon/Melee/Axe/ItemAxeTwo.tres" id="14_w5e4r"]
+[ext_resource type="Resource" uid="uid://iwpmdpnapnq4" path="res://Scripts/Abilities/Weapon/Melee/Axe/ItemAxeThree.tres" id="15_t1ixf"]
+[ext_resource type="Resource" uid="uid://b0m1dmt0eqa40" path="res://Scripts/Abilities/Weapon/Melee/Axe/ItemAxeFour.tres" id="16_5f8mt"]
+[ext_resource type="Resource" uid="uid://bkd7c42o3xi0w" path="res://Scripts/Abilities/Weapon/Melee/ChainSaw/ItemChainSawOne.tres" id="17_nk4cc"]
+[ext_resource type="Resource" uid="uid://cnrhn5tvjkmtx" path="res://Scripts/Abilities/Weapon/Melee/ChainSaw/ItemChainSawTwo.tres" id="18_g1qe8"]
+[ext_resource type="Resource" uid="uid://defccih2md5m1" path="res://Scripts/Abilities/Weapon/Melee/ChainSaw/ItemChainSawThree.tres" id="19_58csl"]
+[ext_resource type="Resource" uid="uid://btfgx46ft00c3" path="res://Scripts/Abilities/Weapon/Melee/ChainSaw/ItemChainSawFour.tres" id="20_t4vd2"]
+[ext_resource type="Resource" uid="uid://ddo2g6py0p80r" path="res://Scripts/Abilities/Weapon/Melee/Mace/ItemMaceOne.tres" id="21_x0e5u"]
+[ext_resource type="Resource" uid="uid://cbtal46lv4py8" path="res://Scripts/Abilities/Weapon/Melee/Mace/ItemMaceTwo.tres" id="22_66v3m"]
+[ext_resource type="Resource" uid="uid://bt0n6w4e4mre5" path="res://Scripts/Abilities/Weapon/Melee/Mace/ItemMaceThree.tres" id="23_mijw6"]
+[ext_resource type="Resource" uid="uid://c4xfla7xuxrir" path="res://Scripts/Abilities/Weapon/Melee/Mace/ItemMaceFour.tres" id="24_kleb0"]
+[ext_resource type="Resource" uid="uid://c42a48l7lbaoq" path="res://Scripts/Abilities/Weapon/Melee/Punch/ItemPunchOne.tres" id="25_sisyp"]
+[ext_resource type="Resource" uid="uid://d0evujviltsu6" path="res://Scripts/Abilities/Weapon/Melee/Punch/ItemPunchTwo.tres" id="26_pm71s"]
+[ext_resource type="Resource" uid="uid://cqjk63bixu324" path="res://Scripts/Abilities/Weapon/Melee/Punch/ItemPunchThree.tres" id="27_ew5yc"]
+[ext_resource type="Resource" uid="uid://b0br8ngvo8mn8" path="res://Scripts/Abilities/Weapon/Melee/Punch/ItemPunchFour.tres" id="28_1tpa2"]
+[ext_resource type="Resource" uid="uid://60hvk1k0bqa5" path="res://Scripts/Abilities/Weapon/Melee/Sword/ItemSwordOne.tres" id="29_djj8s"]
+[ext_resource type="Resource" uid="uid://h4qs14teqbck" path="res://Scripts/Abilities/Weapon/Melee/Sword/ItemSwordTwo.tres" id="30_dvbr4"]
+[ext_resource type="Resource" uid="uid://cxeif6pwomkvc" path="res://Scripts/Abilities/Weapon/Melee/Sword/ItemSwordThree.tres" id="31_mne3d"]
+[ext_resource type="Resource" uid="uid://duxnyljw4vyjj" path="res://Scripts/Abilities/Weapon/Melee/Sword/ItemSwordFour.tres" id="32_lihcb"]
+[ext_resource type="Resource" uid="uid://y0733w5uvalk" path="res://Scripts/Abilities/Weapon/Melee/Wand/ItemWandOne.tres" id="33_xa4l1"]
+[ext_resource type="Resource" uid="uid://bncxlaliskkov" path="res://Scripts/Abilities/Weapon/Melee/Wand/ItemWandTwo.tres" id="34_0qpij"]
+[ext_resource type="Resource" uid="uid://ce2w2fhvbum80" path="res://Scripts/Abilities/Weapon/Melee/Wand/ItemWandThree.tres" id="35_jsp2j"]
+[ext_resource type="Resource" uid="uid://jlcs7ymtsxjq" path="res://Scripts/Abilities/Weapon/Range/ItemPistolOne.tres" id="36_8gdko"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tw1v"]
+font = ExtResource("8_bugre")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bugre"]
+line_spacing = 0.0
+font = ExtResource("8_bugre")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_4f205")
+
+[node name="BlackBackGround" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0g2wx")
+
+[node name="GrassBackGround" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_pyk7t")
+
+[node name="PlayerWellRounded" parent="." instance=ExtResource("3_pyk7t")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("4_x00a1")
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("7_jhdhk")
+waves_data = Array[ExtResource("8_0ds76")]([ExtResource("9_7dk6h")])
+
+[node name="SpawnTimer" type="Timer" parent="Spawner"]
+one_shot = true
+
+[node name="WaveTimer" type="Timer" parent="Spawner"]
+one_shot = true
+
+[node name="GameUI" type="CanvasLayer" parent="."]
+
+[node name="WaveIndexLabel" type="Label" parent="GameUI"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 20.0
+offset_right = 208.0
+offset_bottom = 111.0
+grow_horizontal = 2
+text = "Wave 1"
+label_settings = SubResource("LabelSettings_2tw1v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaveTimeLabel" type="Label" parent="GameUI"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.5
+offset_top = 100.0
+offset_right = 144.5
+offset_bottom = 188.0
+grow_horizontal = 2
+text = "10"
+label_settings = SubResource("LabelSettings_bugre")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradePanel" parent="GameUI" instance=ExtResource("10_0ds76")]
+unique_name_in_owner = true
+visible = false
+
+[node name="ShopPanel" parent="GameUI" instance=ExtResource("11_7dk6h")]
+unique_name_in_owner = true
+shop_items = Array[ExtResource("12_x66n5")]([ExtResource("13_lr7mh"), ExtResource("14_w5e4r"), ExtResource("15_t1ixf"), ExtResource("16_5f8mt"), ExtResource("17_nk4cc"), ExtResource("18_g1qe8"), ExtResource("19_58csl"), ExtResource("20_t4vd2"), ExtResource("21_x0e5u"), ExtResource("22_66v3m"), ExtResource("23_mijw6"), ExtResource("24_kleb0"), ExtResource("25_sisyp"), ExtResource("26_pm71s"), ExtResource("27_ew5yc"), ExtResource("28_1tpa2"), ExtResource("29_djj8s"), ExtResource("30_dvbr4"), ExtResource("31_mne3d"), ExtResource("32_lihcb"), ExtResource("33_xa4l1"), ExtResource("34_0qpij"), ExtResource("35_jsp2j"), ExtResource("32_lihcb"), ExtResource("36_8gdko"), null, null, null])
+
+[connection signal="on_wave_completed" from="Spawner" to="." method="_on_spawner_on_wave_completed"]
+[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="Spawner/WaveTimer" to="Spawner" method="_on_wave_timer_timeout"]

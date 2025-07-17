@@ -1,0 +1,16 @@
+res://Scenes/Arena.tscn
+res://Scenes/UI/Styles/CommonStyle.tres
+res://Scenes/UI/Styles/EpicStyle.tres
+res://Scenes/UI/Styles/LegendaryStyle.tres
+res://Scenes/UI/Styles/RareStyle.tres
+res://Scripts/Waves/Wave1-5.tres
+res://Scripts/Core/Arena.gd
+res://Scenes/UI/Stats/StatsContainer.tscn
+res://Scenes/UI/Upgrade/UpgradeCard.tscn
+res://Scenes/UI/Upgrade/UpgradePanel.tscn
+res://Scenes/Player/PlayerWellRounded.tscn
+res://Scenes/UI/Shop/ShopCard.tscn
+res://Scenes/UI/ShopPanel.tscn
+res://Scripts/Core/Global.gd
+res://Scripts/Weapon/Weapon.gd
+res://Scripts/Weapon/WeaponBehavior.gd
